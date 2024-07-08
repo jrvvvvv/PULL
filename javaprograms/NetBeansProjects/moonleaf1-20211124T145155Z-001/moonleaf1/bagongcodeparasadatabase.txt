@@ -1,0 +1,12 @@
+  try{
+             
+            String content;
+            content=new String(Files.readAllBytes(Paths.get("time.txt")));
+            Statement st= conn.createStatement();
+            st.executeUpdate("UPDATE ORDERED "
+                    + "set PROD='Nutella Milk Tea',SIZEE='TALL',PRICEORDER=125.00 where DATEORDERED= to_timestamp('"+content+"')");
+            conn.close();
+        } catch (Exception e) {
+           
+         }
+        

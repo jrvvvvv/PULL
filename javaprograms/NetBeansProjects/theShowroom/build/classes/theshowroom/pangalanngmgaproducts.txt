@@ -1,0 +1,12 @@
+civic= Phoenix Chevel
+vios=  Olets Loco
+Chevy van= Vyegrol Munch
+hiace= Nocan Graviole
+honda crv= Leech Behembra
+montero= Toru Runeterra
+
+sniper 135= Pistol 135 
+supragtr150= EvoSkyline150
+
+yamahamio= Maya Yui
+hondadio= Gionna Natsu 

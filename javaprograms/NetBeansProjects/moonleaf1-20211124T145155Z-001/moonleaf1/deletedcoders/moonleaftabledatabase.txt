@@ -1,0 +1,21 @@
+create table operator(username varchar(20),
+password varchar(20));
+
+create table ordered(DateOrdered TIMESTAMP,
+Ordered varchar(20),
+sizee varchar(10),
+price_ordered number(7),
+addons varchar(20),
+price_addons number(7));
+
+//GAMIT UNG NETBEANS HINDI SA MISMONG SQL COMMAND
+create table operator(username varchar(20),
+password varchar(20));
+
+
+
+
+
+
+
+

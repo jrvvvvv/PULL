@@ -1,0 +1,14 @@
+.main{
+    background-image: url("backgroundwood.jpg");
+}
+
+.loginBox{
+    color: #e0e0e0;;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.loginButton{
+    font-family: monospace;
+}
+

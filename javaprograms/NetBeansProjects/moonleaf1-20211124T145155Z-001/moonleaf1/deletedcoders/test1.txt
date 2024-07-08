@@ -1,0 +1,9 @@
+try {
+            String content;
+            content=new String(Files.readAllBytes(Paths.get("receipt.txt")));
+     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+   LocalDateTime now = LocalDateTime.now(); 
+    System.out.println ("                   *Moonleaf Cafe*                     ");
+    System.out.println("                 "+ dtf.format(now)); 
+    System.out.println("Order"+"                                                "+ "Price");
+            System.out.println(content);

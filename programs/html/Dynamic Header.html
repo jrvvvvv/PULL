@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic H1</title>
+</head>
+
+<body>
+    <h1 id="dynamicH1">Initial Text</h1>
+
+</body>
+
+<script>
+    // List of strings to cycle through
+const headings = [
+    "Welcome to our website!",
+    "Check out our latest products.",
+    "Don't miss our special offers.",
+    "Stay tuned for more updates.",
+    "Thank you for visiting!"
+];
+
+// Interval time in milliseconds (e.g., 3 seconds)
+const intervalTime = 3000; 
+
+/* if you want a day/s of interval this is how it goes
+There are 1000 milliseconds in a second.
+There are 60 seconds in a minute.
+There are 60 minutes in an hour.
+There are 24 hours in a day.
+There are 7 days in a week.
+So, the interval time in milliseconds for 1 week is:
+            1000×60×60×24×7                   */
+
+
+
+// Get the H1 element
+const dynamicH1 = document.getElementById("dynamicH1");
+
+// Function to update the H1 text
+let currentIndex = 0;
+function updateH1() {
+    dynamicH1.textContent = headings[currentIndex];
+    currentIndex = (currentIndex + 1) % headings.length;
+}
+
+// Initial call to set the first heading
+updateH1();
+
+// Set interval to update the H1 text
+setInterval(updateH1, intervalTime);
+
+
+/* This is another approach 
+
+// Array of messages for 20 weeks
+const messages = [
+    "Week 1: Welcome to our weekly update!",
+    "Week 2: Here's something new!",
+    "Week 3: Another update for you.",
+    "Week 4: Exciting news this week!",
+    "Week 5: Don't miss this!",
+    "Week 6: Halfway through our updates!",
+    "Week 7: More to come!",
+    "Week 8: Stay tuned!",
+    "Week 9: Almost there!",
+    "Week 10: Week 10 already!",
+    "Week 11: More updates for you!",
+    "Week 12: Keeping you informed.",
+    "Week 13: Lucky week 13!",
+    "Week 14: Just a few more weeks.",
+    "Week 15: Update time!",
+    "Week 16: Nearing the end!",
+    "Week 17: Weekly news!",
+    "Week 18: Important update!",
+    "Week 19: Second to last!",
+    "Week 20: Final week update!"
+];
+
+// Get the start date (the date when the first message should be displayed)
+const startDate = new Date('2024-06-04');  // Set your start date here
+
+// Calculate the current week number
+const currentDate = new Date();
+const diffTime = Math.abs(currentDate - startDate);
+const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));
+
+// Get the message for the current week
+let message;
+if (diffWeeks < messages.length) {
+    message = messages[diffWeeks];
+} else {
+    message = "No more updates.";
+}
+
+// Display the message
+document.getElementById('dynamicH1').innerText = message;
+ */
+
+</script>
+</html>
